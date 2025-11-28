@@ -1,0 +1,45 @@
+body {
+  height: 90%;
+  margin: 10; 
+  padding: 10; 
+}
+
+
+#text_input {
+    height: 370px;
+    width: 100%;
+}
+
+.my_box1 {
+  text-align: right;
+}
+
+.my_box2 {
+  display: flex; 
+  gap: 20px; 
+  justify-content: right; 
+  align-items:baseline; 
+}
+#text_display {
+  padding: 20px;
+  font-size: 20px;
+  font-family: serif;
+  word-spacing: 5px;
+}
+
+#remove_word {
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  background-color: white;
+}
+
+.text_box {
+  padding: 35px;
+  
+}
+
+#set_text {
+  width: 75%;
+  height: 40px;
+}
