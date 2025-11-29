@@ -34,12 +34,28 @@ body {
   background-color: white;
 }
 
+#pop_up_button{
+  height: 40px;
+  width: 80%;
+  font-size: 20px;
+  background-color: white;
+  
+
+}
+
+#read_text {
+  position: relative;
+}
+
 .text_box {
   padding: 35px;
+  text-align: center;
   
 }
 
 #set_text {
   width: 75%;
   height: 40px;
+  background-color: white;
+  font-size: 15px;
 }

@@ -1,6 +1,7 @@
 var used_words = [];
 var words;
 var punctuation = ['.', ',', '!', '?', '$', ';', ':', '(', ')', '%'];
+var times_pressed = 0;
 
 function set_text(){
     var text = document.getElementById("text_input");
@@ -72,4 +73,20 @@ function change_bg(){
     var color = document.getElementById('bg_color').value;
     localStorage.setItem('bg_color', color);
     document.body.style.backgroundColor = color;
+}
+
+function pop_up_text(){
+    var pop_up_box = document.getElementById('read_text');
+    var pop_up_button = document.getElementById('pop_up_button');
+    times_pressed ++;
+
+    if(times_pressed % 2 !== 0){
+        pop_up_box.textContent = localStorage.getItem('text to memorize')
+        pop_up_box.show();
+        pop_up_button.textContent = 'Close Original Text';
+    }
+    else{
+        pop_up_box.close();
+        pop_up_button.textContent = 'Review Original Text';
+    }
 }
