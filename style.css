@@ -31,15 +31,12 @@ body {
   height: 40px;
   width: 100%;
   font-size: 20px;
-  background-color: white;
 }
 
 #pop_up_button{
   height: 40px;
   width: 80%;
-  font-size: 20px;
-  background-color: white;
-  
+  font-size: 20px; 
 
 }
 
@@ -56,6 +53,14 @@ body {
 #set_text {
   width: 75%;
   height: 40px;
-  background-color: white;
   font-size: 15px;
+}
+
+.button {
+  background-color: white;
+}
+
+.button:hover {
+  background-color: rgb(192, 192, 192);
+  cursor: pointer;
 }
