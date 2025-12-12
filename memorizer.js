@@ -90,3 +90,31 @@ function pop_up_text(){
         pop_up_button.textContent = 'Review Original Text';
     }
 }
+
+function get_verse(){
+    var book = document.getElementById('book').value;
+    var chapter = document.getElementById('chapter').value;
+    var verse = document.getElementById('verse').value;
+    var verse_display = document.getElementById('text_input');
+
+    if(book && chapter && verse){
+        
+        try{
+            fetch(
+                `https://cdn.jsdelivr.net/gh/wldeh/bible-api/bibles/en-asv/books/${book}/chapters/${chapter}/verses/${verse}.json`
+                
+            )
+            .then((response) => response.json())
+            .then((data) => verse_display.value = data.text);
+        }
+        catch{
+            alert('Invalid Input');
+        }
+        finally{
+            console.log('Verse fetched successfully');
+        }
+    }
+    else{
+        alert('You must fill in input fields.');
+    }
+}

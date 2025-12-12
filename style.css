@@ -6,7 +6,7 @@ body {
 
 
 #text_input {
-    height: 370px;
+    height: 250px;
     width: 100%;
 }
 
@@ -63,4 +63,26 @@ body {
 .button:hover {
   background-color: rgb(192, 192, 192);
   cursor: pointer;
+}
+
+#bv_select {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 10px;
+  column-gap: 20px;
+  padding: 20px;
+  
+}
+
+.verse_input {
+  height: 30%;
+  width: 350px;
+}
+
+#get_verse{
+  width: 150px;
+  height: 30px;
+  background-color: white;
+  border-radius: 20px;
 }
