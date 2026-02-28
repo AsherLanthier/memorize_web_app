@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Memorize
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Test how well you memorized</h1>
+
+        <div class="test">
+            <div class="compare">
+                <h2>Type text here:</h2>
+                <textarea name="test_memorization" id="test_memorization"></textarea>
+            </div>
+
+            <div class="compare">
+                <h2>Original text:</h2>
+                <p id="original_text_display"></p>
+            </div>
+        </div>
+
+        
+        <a href="memorize.html">Go Back</a>
+        <button class="button" id="check_memorization_button" onclick="test_memorization()">Test Your Memorization</button>
+
+        <script src="memorizer.js"></script>
+    </body>
+</html>

@@ -80,9 +80,45 @@ body {
   width: 350px;
 }
 
+.switch_page {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 #get_verse{
   width: 150px;
   height: 30px;
   background-color: white;
   border-radius: 20px;
+}
+
+#test_memorization{
+  width: 40%;
+  height: 80%;
+}
+
+.test{
+  display: flex;
+  height: 70vh;
+}
+
+.compare{
+  width: 70%;
+}
+
+#test_memorization{
+  width: 90%;
+}
+
+.normal{
+  background-color: white;
+}
+
+.correct{
+  background-color: rgb(85, 226, 94);
+}
+
+.wrong{
+  background-color: rgb(255, 100, 100);
 }
