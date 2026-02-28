@@ -1,7 +1,7 @@
 var used_words = [];
 var words;
 var punctuation = ['.', ',', '!', '?', '$', ';', ':', '(', ')', '%'];
-var times_pressed = 0;
+var review_times_pressed = 0;
 
 function set_text(){
     var text = document.getElementById("text_input");
@@ -78,9 +78,9 @@ function change_bg(){
 function pop_up_text(){
     var pop_up_box = document.getElementById('read_text');
     var pop_up_button = document.getElementById('pop_up_button');
-    times_pressed ++;
+    review_times_pressed ++;
 
-    if(times_pressed % 2 !== 0){
+    if(review_times_pressed % 2 !== 0){
         pop_up_box.textContent = localStorage.getItem('text to memorize')
         pop_up_box.show();
         pop_up_button.textContent = 'Close Original Text';
@@ -117,4 +117,33 @@ function get_verse(){
     else{
         alert('You must fill in input fields.');
     }
+}
+
+function test_memorization(){
+    var memorize_attempt_display = document.getElementById('test_memorization');
+    var memorize_attempt = memorize_attempt_display.value;
+    var original_text = localStorage.getItem('text to memorize');
+    var original_text_display = document.getElementById('original_text_display');
+    var check_text_button = document.getElementById('check_memorization_button');
+
+
+    if (check_text_button.textContent == 'Test Your Memorization'){
+        original_text_display.textContent = original_text;
+
+        if (memorize_attempt == original_text){
+            memorize_attempt_display.className = 'correct';
+        }
+        else {
+            memorize_attempt_display.className = 'wrong';
+            check_text_button.textContent = 'Try Again';
+        }
+    }
+
+    else {
+        original_text_display.textContent = '';
+        memorize_attempt_display.className = 'normal';
+        check_text_button.textContent = 'Test Your Memorization';
+    }
+
+
 }
